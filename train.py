@@ -13,9 +13,9 @@ labels = np.sort(np.unique(y))
 y = np.array([np.where(labels == x) for x in y]).flatten()
 
 #model = LogisticRegression()
-#model = RandomForestClassifier(n_estimators=100, random_state=42)
+model = RandomForestClassifier(n_estimators=100, random_state=42)
 #model = SVC(kernel='linear', random_state=42)
-model = GaussianNB()
+#model = GaussianNB()
 model.fit(X, y)
 
 with open("model.pkl", 'wb') as f:
